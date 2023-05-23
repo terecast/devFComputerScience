@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASE DE DATOS ALUMNOS</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <link rel="stylesheet" href="base.datos.alumnos.css">
+    <script defer src="appbda.js"></script>
+    <script defer src="base.datos.alumnos.js"></script>
+</head>
+
+<body>
+
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <p class="title">
+                BIENVENIDO A ESCUELA
+            </p>
+
+        </div>
+    </section>
+
+    <div class="tabs is-medium">
+        <ul>
+            <li><a id="alta-alumno" onclick="eventoMostrar('alta')">ALTA ALUMNOS</a></li>
+            <li><a id="alum-registrado" onclick="mostrarLista();">ALUMNOS REGISTRADOS</a></li>
+            <li><a id="inscribir-alumno" onclick="inscribeAlumnos()">INSCRIBIR ALUMNO</a></li>
+            <li><a id="cons-lista" onclick="consultaAlumnosInsc()">CONSULTAR LISTA ALUMNOS</a></li>
+        </ul>
+
+    </div>
+    <br>
+
+    <!--seccion Alta alumno-->
+    <section id="alta" class="statusDisplayNone">
+        <div class="container">
+            <div class="field m-t6">
+                <label class="label">Nombre</label>
+                <div class="control">
+                    <input id="name" class="input input-short" type="text" placeholder="Ingresa nombre">
+                </div>
+            </div>
+
+            <div class="field ">
+                <label class="label">Apellido</label>
+                <div class="control">
+                    <input id="lastname" class="input input-short" type="text" placeholder="Ingresa apellido">
+                </div>
+            </div>
+
+            <div class="field ">
+                <label class="label">Edad</label>
+                <div class="control">
+                    <input id="age" class="input input-short" type="text" placeholder="Ingresa Edad">
+                </div>
+            </div>
+
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button onclick="altaAlumno()" class="button is-link" type="button">Aceptar</button>
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <br>
+    <br>
+
+    <!--seccion alumnos registrados -->
+
+    <section id="lista" class="statusDisplayNone">
+
+        <table id="tableList" class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">APELLIDO</th>
+                    <th scope="col">EDAD</th>
+                </tr>
+            </thead>
+            <tbody>
+
+
+            </tbody>
+        </table>
+    </section>
+
+
+
+
+    <!--seccion Inscribir alumno -->
+    <section id="insc-alumno" class="statusDisplayNone">
+
+        <h2>INSCRIBE AL ALUMNO</h2>
+
+        <div class="select is-normal">
+
+            <select id="a-registrados">
+                <option value="inicio" >Selecciona Alumno</option>
+            
+
+            </select>
+            
+        </div>
+
+        <div class="select is-normal">
+            <select id="c-registradas">
+                <option value="inicio">Selecciona Clase</option>
+                <option>Español</option>
+                <option>Matematicas</option>
+                <option>Geografia</option>
+                <option>Fisica</FIeldset>
+                </option>
+            </select>
+        </div>
+
+        <div class="select is-normal">
+            <select id="g-registrados" >
+                <option value="inicio">Selecciona Grupo</option>
+                <option>MATUTINO</option>
+                <option>VESPERTINO</option>
+
+            </select>
+        </div>
+        <br>
+        <br>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button onclick= "btnInscribe()"class="button is-link">Inscribir</button>
+            </div>
+
+        </div>
+
+        <div id="divAlumnoInscrito" class="divMensaje"></div>
+
+    </section>
+
+   
+    <!--seccion mostrar lista de alumnos-->
+    <section id="muestraLista" class="statusDisplayNone">
+        <table id="table-alumnos" class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">APELLIDO</th>
+                    <th scope="col">CLASE</th>
+                    <th scope="col">GRUPO</th>
+                    
+                </tr>
+            </thead>
+
+            <tbody>
+
+            </tbody>
+            
+        </table>
+
+    </section>
+
+
+
+
+
+</body>
+
+</html>

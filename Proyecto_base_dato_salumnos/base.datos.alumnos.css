@@ -1,0 +1,35 @@
+
+
+.title{
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.container{
+    border: 2px;
+}
+
+.input-short{
+    width: 350px;
+  
+
+    
+}
+
+.title1{
+  
+    text-align: center;
+
+}
+
+.statusDisplayNone{
+    display: none
+}
+
+.divMensaje {
+    display: block;
+    width: 100%;
+    color: green;
+    font-weight: bold;
+}
