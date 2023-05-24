@@ -6,6 +6,13 @@
     
 }
 
+.tabs.is-medium ul a:hover{
+    
+    background-color: rgb(132, 182, 216);
+    display: block;
+
+}
+
 .container{
     border: 2px;
 }
